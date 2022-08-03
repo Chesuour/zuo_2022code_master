@@ -3,6 +3,6 @@ Zuochengyun leetcode  written by python. Only for learning, Only for me.
 
 start 2022/8/3
 
-day 1 
+class 0 
 1. CoverMaxPoint
 2. MinSwapStep
