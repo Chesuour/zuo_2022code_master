@@ -13,4 +13,7 @@ this hub records my learning process to motivate myself and witness my growth.
 3. TargetSum （recurrence ways，better ways need study 算法数据体系结构班）
 
 2022/8/4 算法和数据结构体系班 
-1. RobotWalk (two ways) recurrence ways + space --> time
+1. RobotWalk (three ways) 
+    i) recurrence ways 
+    2) space --> time
+    3) dp solution
