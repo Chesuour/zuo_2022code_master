@@ -16,7 +16,8 @@ class Solution():
         #arr 列表 start 开始的位置 sum 一共走几步 aim 走到的位置
         dp = [[-1]*(arr+1)]*(sum+1) 
         # print(dp)
-        return Solution.process2( start, sum, aim, arr,dp)
+        # print(Solution.pro~ocess2( start, sum, aim, arr,dp)) 
+        print(Solution.process3(arr, start, aim, sum))
 
     def process(curr, res, aim, N):
         if res == 0:
@@ -50,8 +51,17 @@ class Solution():
         dp[curr][res] = ans
         return ans
 
-    def process3(curr, res, aim, N, dp):
-        
+    def process3(N, start, aim, K):
+        dp = [[0]*(N+1)]*(K+1)
+        dp[aim][0] = 1
+        for i in range(1,K):#列
+            dp[1][i] = dp[2][i-1]
+            for j in range(2,N-1):
+                dp[j][i] = dp[j-1][i-1] + dp[j+1][i-1]
+            dp[N][i] = dp[N-1][i-1]
+        return dp[start][K]
+
+
 
 
     
