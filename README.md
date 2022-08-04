@@ -11,3 +11,6 @@ this hub records my learning process to motivate myself and witness my growth.
 1. CoverMaxPoint
 2. MinSwapStep
 3. TargetSum （recurrence ways，better ways need study 算法数据体系结构班）
+
+2022/8/4 算法和数据结构体系班 
+1. RobotWalk (two ways) recurrence ways + space --> time
