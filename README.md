@@ -17,3 +17,7 @@ this hub records my learning process to motivate myself and witness my growth.
     i) recurrence ways 
     2) space --> time
     3) dp solution
+    
+2022/8/5 算法和数据结构体系班 
+1. CardsInline (two ways)
+grilfriend comes to find me 
