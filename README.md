@@ -19,5 +19,5 @@ this hub records my learning process to motivate myself and witness my growth.
     3) dp solution
     
 2022/8/5 算法和数据结构体系班 
-1. CardsInline (two ways)
+1. CardsInline (three ways)
 grilfriend comes to find me 
