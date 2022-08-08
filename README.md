@@ -22,4 +22,6 @@ this hub records my learning process to motivate myself and witness my growth.
 1. CardsInline (three ways)
 grilfriend comes to find me 
 
-2022/8/8 算法和数据结构体系班 背包问题
+2022/8/8 算法和数据结构体系班 
+1. 背包问题 two ways
+2. ConvertToLetterString 力扣有原题
