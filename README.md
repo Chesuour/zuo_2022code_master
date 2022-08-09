@@ -25,3 +25,7 @@ grilfriend comes to find me
 2022/8/8 算法和数据结构体系班 
 1. 背包问题 two ways
 2. ConvertToLetterString 力扣有原题
+
+2022/8/9 算法和数据结构体系班 
+1. ConvertToLetterString recurrence ways
+2. TicketsToSpellWord strat
