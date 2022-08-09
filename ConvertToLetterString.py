@@ -22,10 +22,31 @@ class Solution():
         if string[index] == '0':
             return 0
         res = Solution.process(string, index+1)
-        if (index+1 )< len(string) and ((int(string[index]) - 0)+ (int(string[index+1]) -0) <27):
+        if (index+1 )< len(string) and (int(string[index])*10+ int(string[index+1]) <27):
             res += Solution.process(string, index+2)
+        print(res)
         return res
+
+    def ConvertToLetterString_dp(num):
+        string= str(num)
+        N = len(string)
+        if string == None or N == 0:
+            return 0
+        dp = [0]*(N+1)
+        dp[N] = 1
+        res = 0
+        # range(N-1,-1,-1) 是从N-1～0，如果是range(N-1,-1,-1)，则就是N-1～1，不包含0，注意python和java的区别
+        for i in range(N-1,-1,-1):
+            if string[i] !='0':
+                res = dp[i+1]
+                if (i+1 )< N and (int(string[i])*10+ int(string[i+1])  <27):
+                    res += dp[i+2]
+                dp[i] = res
+        print(dp)
+        return dp[0]
+
         
 if __name__=="__main__":
     num = 1111
     print(Solution.ConvertToLetterString(num))
+    print(Solution.ConvertToLetterString_dp(num))
