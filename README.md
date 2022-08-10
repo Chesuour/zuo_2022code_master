@@ -29,3 +29,6 @@ grilfriend comes to find me
 2022/8/9 算法和数据结构体系班 
 1. ConvertToLetterString recurrence ways
 2. TicketsToSpellWord strat
+
+2022/8/10 算法和数据结构体系班 
+TicketsToSpellWord strat 暴力递归、暂放，有点迷糊，看完回头写
