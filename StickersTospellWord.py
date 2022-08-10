@@ -15,3 +15,42 @@ Address: 出门问问 苏州
 
 """
 
+# 有点难 暂放 学完回头写
+
+class Solution():
+    def StickersToSpellWord(stickers, target):
+        print(1)
+        ans = Solution.process(stickers, target)
+        return -1 if ans == float("+inf") else ans
+
+    def process(stickers, target):
+        print(2)
+        if len(target) == 0:
+            return 0
+        mini = float("+inf")
+        for first in stickers:
+            rest = Solution.minus(target, first)
+            if len(rest) != len(target):
+                rest = mini(mini, Solution.process(stickers, rest))
+        return  mini + (0 if min==float("+inf") else 1)
+
+    def minus(s1, s2):
+        print(3)
+        count = [0]*26
+        for str in s1:
+            count[ord(str) -ord('a')] +=1
+        for str in s2:
+            count[ord(str) - ord('a')] -=1
+        bulider = []
+        for i in range(26):
+            if count[i] > 0:
+                for j in range(count[i]):
+                    bulider.append(ord(i)+'a')
+        print(bulider)
+        return bulider
+
+
+if __name__=="__main__":
+    stickers = ["with","example","science"]
+    target = "thehat"
+    print(Solution.StickersToSpellWord(stickers, target))
