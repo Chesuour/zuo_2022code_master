@@ -32,3 +32,6 @@ grilfriend comes to find me
 
 2022/8/10 算法和数据结构体系班 
 TicketsToSpellWord strat 暴力递归、暂放，有点迷糊，看完回头写
+
+2022/8/13
+Drive 车辆调度问题  暴力递归和动态规划两个方法，动态规划有点小问题。
