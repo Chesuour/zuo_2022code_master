@@ -57,9 +57,7 @@ class Solution_dp():
         if after_dp[L][R] != -1:
             return after_dp[L][R]
         ans = 0
-        if L == R:
-            return 0
-        else:
+        if L != R:
             p1 = Solution_dp.beforehand(arr, L+1, R, before_dp, after_dp)
             p2 = Solution_dp.beforehand(arr, L, R-1, before_dp, after_dp)
             ans = min(p1,p2)
@@ -67,21 +65,43 @@ class Solution_dp():
         return ans
 
     def CardsInLine_dp(arr):
-        if not arr and len(arr) == 0:
+        if not arr or len(arr) == 0:
             return 0
         N = len(arr)
-        before_dp = [[-1]* N]* N
-        after_dp  = [[-1]* N]* N
+        before_dp = [[-1 for i in range(N)]for j in range(N)]
+        after_dp  = [[-1 for i in range(N)]for j in range(N)]
         before = Solution_dp.beforehand(arr, 0, len(arr)-1, before_dp, after_dp)
         after  = Solution_dp.afterhand(arr, 0, len(arr)-1, before_dp, after_dp)
         return max(before, after)
 
+class Solution_second_dp():
+    def CardsInLine_dp2(arr):
+        if  arr == None or len(arr) == 0:
+                return 0
+        N = len(arr)
+        fmap, gmap = [[0 for i in range(N)]for j in range(N)],[[0 for i in range(N)]for j in range(N)]
+        # for i in range(N):
+        #     fmap[i][i] = arr[i]
+        # for startCol in range(N):
+        #     L, R =0, startCol
+        #     while R < N:
+        #         fmap[L][R] = max(arr[L] + gmap[L + 1][R], arr[R] + gmap[L][R - 1])
+        #         gmap[L][R] = min(fmap[L + 1][R], fmap[L][R - 1])
+        #         L +=1
+        #         R +=1
+        for j in range(0, N):
+            fmap[j][j] = arr[j]
+            for i in range(j-1, 0,-1):
+                fmap[i][j] = max(arr[i]+ gmap[i+1][j],arr[j] + gmap[i][j-1])
+                gmap[i][j] = min(fmap[i+1][j], fmap[i][j-1])
+        return max(fmap[0][N - 1], gmap[0][N - 1])
+
+
+
 
 if __name__=="__main__":
-    print(Solution_cur.CardsInLine([50, 100, 20, 10]))
-    print(Solution_cur.CardsInLine([]))
-    print(Solution_cur.CardsInLine([0]))
+    print(Solution_cur.CardsInLine([5, 7, 4, 5, 8, 1, 6, 0, 3, 4, 6, 1, 7 ]))
 
-    print(Solution_dp.CardsInLine_dp([50, 100, 20, 10]))
-    print(Solution_dp.CardsInLine_dp([]))
-    print(Solution_dp.CardsInLine_dp([0]))
+    print(Solution_dp.CardsInLine_dp([5, 7, 4, 5, 8, 1, 6, 0, 3, 4, 6, 1, 7 ]))
+
+    print(Solution_second_dp.CardsInLine_dp2([5, 7, 4, 5, 8, 1, 6, 0, 3, 4, 6, 1, 7 ]))

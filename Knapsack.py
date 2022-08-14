@@ -44,7 +44,7 @@ class Solution():
             return 0
         N =len(W)
         bag_dp = [[0]*(bag+1)]*(N+1)
-        for index in range(N-1,0,-1):
+        for index in range(N-1,-1,-1):
             for rest in range(bag,0,-1):
                 p1 = bag_dp[index+1][rest]
                 p2 = 0

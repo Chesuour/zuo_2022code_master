@@ -52,8 +52,8 @@ class Solution():
         return ans
 
     def process3(N, start, aim, K):
-        dp = [[0]*(N+1)]*(K+1)
-        dp[aim][0] = 1
+        dp = [[0]*(K+1)]*(N+1)
+        dp[aim][N] = 1
         for i in range(1,K):#列
             dp[1][i] = dp[2][i-1]
             for j in range(2,N-1):
@@ -67,5 +67,6 @@ class Solution():
     
 if __name__ == "__main__":
       print(Solution.RobotWalk(4, 2, 4, 4))
+      print(Solution.process3(4, 2, 4, 4))
 
     

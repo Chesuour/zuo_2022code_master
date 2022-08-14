@@ -39,7 +39,7 @@ class Solution():
 
     def Driver_dp(income):
         N = len(income)
-        M = N>>1
+        M = N//2
         """
         int N = income.length;
 		int M = N >> 1;
@@ -59,8 +59,8 @@ class Solution():
 		}
 		return dp[0][M];
         """
-        dp = [[0]*(M+1)]* (N+1)
-        for i in range(N-1,0,-1):
+        dp = [[0 for i in range(M+1)]for j in range(N+1)]
+        for i in range(N-1,-1,-1):
             # print("i is :", i)
             for j in range(M+1):
                 # print("j is :", j)
