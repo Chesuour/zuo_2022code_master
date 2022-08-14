@@ -48,8 +48,8 @@ m = 3
 dp = [[0] * n] * m
 dp[0][1] = 1
 print dp
-# output:
-# [[0, 1, 0], [0, 1, 0], [0, 1, 0]]
+output:
+[[0, 1, 0], [0, 1, 0], [0, 1, 0]]
 matrix = [array] * 3
 也就是说matrix = [array] * 3操作中 只是创建3个指向array的引用 所以一旦array改变matrix中3个list也会随之改变。
 那如何才能在python中创建一个二维数组呢
