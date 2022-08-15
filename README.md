@@ -59,3 +59,8 @@ matrix = [array] * 3
 方法2 间接定义
 
 matrix = [[0 for i in range(3)] for i in range(3)]
+
+2022/8/15 大厂面试100题
+LengthOfLagestSubstring 
+MaxPairNumber
+今后readme不在记录，太多太长，日期写在题目名字里，问题可以更新在这里
